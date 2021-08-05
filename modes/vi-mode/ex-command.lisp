@@ -74,7 +74,7 @@
     (lem:find-file (merge-pathnames filename
                                     (lem:buffer-directory)))))
 
-(define-ex-command "^(vs|vsplit)$" (range filename)
+(define-ex-command "^(vs|vsp|vsplit)$" (range filename)
   (declare (ignore range))
   (lem:split-active-window-horizontally)
   (unless (string= filename "")
