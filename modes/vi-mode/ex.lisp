@@ -18,8 +18,8 @@
         ":"
         :completion-function
         (lambda (str)
-          (when (ppcre:scan "^(e|vs|sp)[ \\.]" str)
-            (let ((comp-str (ppcre:regex-replace "^(e|vs|sp)\\s*" str "")))
+          (when (ppcre:scan "^(e|vs|vsp|sp)[ \\.]" str)
+            (let ((comp-str (ppcre:regex-replace "^(e|vs|vsp|sp)\\s*" str "")))
               (if (string= comp-str ".")
                   (list (format nil "~A/" str))
                   ;; Almost same as pormpt-file-complete in lem-core/completion-file.lisp
